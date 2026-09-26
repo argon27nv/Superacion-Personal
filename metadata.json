@@ -1,0 +1,6 @@
+{
+  "name": "Superación Personal",
+  "description": "Aplicación oficial de fe, motivación y crecimiento del canal Superación Personal con avatares interactivos, juegos de fe y contenido premium.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

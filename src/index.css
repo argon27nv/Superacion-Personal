@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Animated talking pulse */
+@keyframes subtle-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes mouth-talk {
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes eye-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+.animate-subtle-bob {
+  animation: subtle-bob 3s ease-in-out infinite;
+}
+
+.animate-mouth-active {
+  animation: mouth-talk 0.28s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.animate-blink-natural {
+  animation: eye-blink 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Glassmorphism & Vivid Primary Accents */
+.primary-blue-gradient {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 50%, #172554 100%);
+}
+
+.primary-yellow-glow {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.45);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.glass-card-glow {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.4) 0%, rgba(15, 23, 42, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
